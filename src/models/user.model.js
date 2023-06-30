@@ -1,17 +1,27 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
-    nombre: {
+    nombreCompleto: {
         type: String,
         required: true,
         trim: true
     },
-    apellidoPaterno: {
+    direccion: {
         type: String,
         required: true,
         trim: true
     },
-    apellidoMaterno: {
+    edad: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    telefono: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    email: {
         type: String,
         required: true,
         trim: true

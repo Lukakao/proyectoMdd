@@ -3,16 +3,18 @@ import bcrypt from 'bcryptjs';
 import { createAccessToken } from '../libs/jwt.js';
 
 export const register = async (req, res) => {
-    const {nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento, rut, password} = req.body;
+    const {nombreCompleto, direccion, edad, telefono, email, fechaNacimiento, rut, password} = req.body;
 
     try{
 
         const passwordHash = await bcrypt.hash(password,10) 
 
         const newUser= new User({
-            nombre,
-            apellidoPaterno,
-            apellidoMaterno,
+            nombreCompleto,
+            direccion,
+            edad,
+            telefono,
+            email,
             fechaNacimiento,
             rut,
             password: passwordHash,
@@ -25,9 +27,12 @@ export const register = async (req, res) => {
         res.cookie("token", token);
         res.json({
             id: userSaved.id,
-            nombre: userSaved.nombre,
-            apellidoPaterno: userSaved.apellidoPaterno,
-            apellidoMaterno: userSaved.apellidoMaterno,
+            nombreCompleto: userSaved.nombreCompleto,
+            direccion: userSaved.direccion,
+            edad: userSaved.edad,
+            telefono: userSaved.telefono,
+            email: userSaved.email,
+            fechaNacimiento: userSaved.fechaNacimiento,
             rut: userSaved.rut,
             createdAt: userSaved.createdAt,
             updateAt: userSaved.updatedAt,

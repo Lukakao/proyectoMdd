@@ -9,4 +9,4 @@ Se requiere una extranet para un Centro de Formación Técnico para los brigadis
         -Felipe Hugo Ignacio Aguilera Suazo
         -José Miguel Acuña Candia
         -Diego Alexis Salazar Jara
-        -Lukas Sanhueza
+        -Lukas André Sanhueza Solar

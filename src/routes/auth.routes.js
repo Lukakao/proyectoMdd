@@ -1,4 +1,4 @@
-import { Router } from "express"
+import {Router} from "express"
 import { login, logout, register, prueba } from '../controllers/auth.controller.js'
 
 const router = Router()

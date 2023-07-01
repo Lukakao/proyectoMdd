@@ -2,13 +2,13 @@
 import express from "express"
 
 // Importa el enrutador de usuarios
-import postulanteRoutes from '../postulacion.routes.js'
+import postulanteRoutes from './postulacion.routes.js'
 
 // Crea una instancia del enrutador
 const router = express.Router();
 
 // Define las rutas para los usuarios /api/usuarios
-router.use('/postulante', postulanteRoutes);
+router.use('/', postulanteRoutes);
 
 // Exporta el enrutador
-module.exports = router;
+export default router
